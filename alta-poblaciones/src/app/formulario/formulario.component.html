@@ -1,19 +1,19 @@
 <div class="login-box">
     <h2>Añadir poblaciones</h2>
-    <form action="loginsiguiente.php" method="POST">
+    <form action="" method="POST">
         <div class="user-box">
-            <input type="text" name="nombre" required="">
+            <input type="text" required [(ngModel)]="poblaciones.nombre" name="nombre">
             <label>Nombre:</label>
         </div>
         <div class="user-box">
-            <input type="textarea" name="descripcion" required="" class="textarea">
+            <textarea name="descripcion" required [(ngModel)]="poblaciones.descripcion" class="textarea"></textarea>
             <label>Descripción: </label>
-            
+
         </div>
-        
-        <input type="file" name="imagen" id="" value="Subir Imagen" class="boton">
+        <input type="text" name="lugares[]" value="">
+        <input type="file" name="iImagen" id="" value="Subir Imagen" class="boton">
         <input type="reset" class="boton">
-        <input type="submit" value="Añadir población" class="boton">
-        
+        <input type="submit" value="Añadir población" class="boton" (click)="enviarDatos()">
+
     </form>
 </div>

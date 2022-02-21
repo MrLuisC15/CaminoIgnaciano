@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { Poblaciones } from '../poblaciones';
 
 @Component({
   selector: 'app-formulario',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent implements OnInit {
-
-  constructor() { }
+  poblaciones: Poblaciones
+  constructor() {
+    this.poblaciones = new Poblaciones("", "")
+  }
 
   ngOnInit(): void {
+  }
+
+  enviarDatos(){
+    console.log(this.poblaciones.nombre + ' ' + this.poblaciones.descripcion);
+
   }
 
 }

@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Crud de poblaciones';
+
+  mostrarMenu(): void {
+    let menu: any = document.querySelector('nav ul');
+    if(menu.style.display == 'flex'){
+      menu.style.display = 'none'
+    }
+    menu.style.display = 'flex'
+  }
 }

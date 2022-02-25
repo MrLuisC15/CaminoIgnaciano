@@ -8,12 +8,14 @@ import { APP_BASE_HREF } from '@angular/common';
 import { AppComponent } from './app.component';
 import { AltaPoblacionesComponent } from './alta-poblaciones/alta-poblaciones.component';
 import { Alta } from './alta.service';
+import { ListadoPoblacionesComponent } from './listado-poblaciones/listado-poblaciones.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AltaPoblacionesComponent
+    AltaPoblacionesComponent,
+    ListadoPoblacionesComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@
         /* Función constructor */
 
 		function __construct() {
-			
+
 			$this->conexion = new Conexion;
 
 		}
@@ -22,5 +22,27 @@
 
 			return $this->conexion->realizarConsulta($consulta);
 		}
-	}
-?>
+
+    function listadoPoblaciones(){
+      $consulta = "SELECT * FROM poblaciones;";
+
+
+      $resultado = $this->conexion->realizarConsulta($consulta);
+		  $numfila = $resultado->num_rows;
+
+      $poblaciones = array();
+
+      if($numfila == 0){
+        echo 'Filas no encontradas';
+      }
+      else{
+        while($fila = $resultado->fetch_array(MYSQLI_ASSOC)){
+          array_push($poblaciones, [
+              "nombrePoblacion" => $fila["nombre"],
+              "descripcion" => $fila["descripcion"]
+          ]);
+        }
+        echo json_encode($poblaciones);
+      }
+	  }
+  }

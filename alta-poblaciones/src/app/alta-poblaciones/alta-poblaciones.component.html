@@ -1,5 +1,5 @@
 <div class="formulario" method="POST">
-  <h2>Gestión de Ruinas</h2>
+  <h2>Añadir población</h2>
   <input type="text" name="nombre" placeholder="Nombre..." required [(ngModel)]="poblaciones.nombre">
   <textarea name="descripcion" placeholder="Descripción..." required [(ngModel)]="poblaciones.descripcion"></textarea>
   <div>
@@ -8,6 +8,6 @@
   </div>
   <div>
     <input type="file" name="imagen" required [(ngModel)]="poblaciones.imagen">
-    <button type="submit" name="submit" (click)="enviarDatos('http://localhost/dist/php/controlador/poblaciones_controlador.php')">Añadir población</button>
+    <button type="submit" name="submit" (click)="enviarDatos('http://localhost/dist/php/controlador/poblaciones_controlador.php')">AÑADIR</button>
   </div>
 </div>

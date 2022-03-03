@@ -7,11 +7,6 @@ import { HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
-/*
-  Los servicios se generan con el comando: ng generate service nombre_servicio
-  Solo tienen el fichero ts.
-  Debe importarse en el módulo (app.module.ts)
-*/
 
 @Injectable({
   providedIn: 'root'

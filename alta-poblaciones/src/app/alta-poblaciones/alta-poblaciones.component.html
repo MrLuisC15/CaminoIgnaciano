@@ -2,12 +2,12 @@
   <h2>Añadir población</h2>
   <input type="text" name="nombre" placeholder="Nombre..." required [(ngModel)]="poblaciones.nombre">
   <textarea name="descripcion" placeholder="Descripción..." required [(ngModel)]="poblaciones.descripcion"></textarea>
-  <div>
+  <!-- <div>
     <input type="text" name="lugares[]" value="" placeholder="Lugar de Interés...">
     <button type="button"><i class="bi bi-plus-lg"></i></button>
-  </div>
+  </div> -->
   <div>
     <input type="file" name="imagen" required [(ngModel)]="poblaciones.imagen">
-    <button type="submit" name="submit" (click)="enviarDatos('http://localhost/dist/php/controlador/poblaciones_controlador.php')">AÑADIR</button>
+    <button type="submit" name="submit" (click)="enviarDatos('http://localhost/dist/php/controlador/c_poblaciones.php')">AÑADIR</button>
   </div>
 </div>

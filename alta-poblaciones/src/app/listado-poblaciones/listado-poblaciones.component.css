@@ -13,6 +13,9 @@
   width: 10rem;
   object-fit: cover;
 }
+p{
+  text-align: justify;
+}
 button{
   padding: 5px 8px;
   margin-right: 10px;

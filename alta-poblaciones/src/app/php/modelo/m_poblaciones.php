@@ -18,7 +18,7 @@
 
 		function altaPoblaciones($nombre, $imagen, $descripcion){
 
-      /*Si el campo descripcion está vacío toma el valor NULL*/
+      /*Si el campo descripcion o el campo imagen está vacío se le asigna el valor NULL*/
 
       if(!empty($descripcion)){
         $descripcion = "'".$descripcion."'";
@@ -27,16 +27,24 @@
         $descripcion = "NULL";
       }
 
+      if(!empty($imagen)){
+        $imagen = "'".$imagen."'";
+      }
+      else{
+        $imagen = "NULL";
+      }
+
 			$consulta = "INSERT INTO poblaciones (nombrePoblacion, imagenPoblacion, descripcion) VALUES
-				('".$nombre."', '".$imagen."' ,$descripcion);";
+				('".$nombre."', $imagen ,$descripcion);";
 
 
 			return $this->conexion->realizarConsulta($consulta);
 		}
 
     /* Metodo que realiza el listado de las poblaciones */
+    /* Sin terminar */
 
-    function listadoPoblaciones(){
+  /*   function listadoPoblaciones(){
       $consulta = "SELECT * FROM poblaciones;";
 
       $resultado = $this->conexion->realizarConsulta($consulta);
@@ -50,6 +58,6 @@
         ]);
       }
         echo json_encode($poblaciones);
-      }
+      } */
     }
 

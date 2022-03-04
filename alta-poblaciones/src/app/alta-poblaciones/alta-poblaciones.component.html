@@ -1,7 +1,7 @@
 <div class="formulario" method="POST">
   <h2>Añadir población</h2>
-  <input type="text" name="nombre" placeholder="Nombre..." required [(ngModel)]="poblaciones.nombre">
-  <textarea name="descripcion" placeholder="Descripción..." required [(ngModel)]="poblaciones.descripcion"></textarea>
+  <input type="text" name="nombre" placeholder="Nombre..." required [(ngModel)]="poblaciones.nombre" maxlength="100">
+  <textarea name="descripcion" placeholder="Descripción..." required [(ngModel)]="poblaciones.descripcion" maxlength="1500"></textarea>
   <!-- <div>
     <input type="text" name="lugares[]" value="" placeholder="Lugar de Interés...">
     <button type="button"><i class="bi bi-plus-lg"></i></button>
